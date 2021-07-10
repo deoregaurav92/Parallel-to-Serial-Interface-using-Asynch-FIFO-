@@ -1,0 +1,11 @@
+#!/bin/sh
+source /apps/set_license.sh                 # step 1
+export VCS_HOME=/apps/synopsys/VCSMX_NEW    # step 2
+source ${VCS_HOME}/bin/environ.sh           # step 3
+vcs -sverilog $@                            # run VCS use System Verilog step 4
+if [ $? -ne 0 ]; then                       # check for a bad compile
+    echo "= = = = = = = = = = = = ="        # line to get our attention
+    echo "vcs compile didn''t work"         # Tell us VCS wasn't happy
+    exit 99                                 # leave the script
+fi                                          # end the if
+./simv                                      # run the simulation step 5
