@@ -1,0 +1,905 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+              Version K-2015.06-SP5-1 for linux64 - Feb 26, 2016 
+                                        
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25 /apps/synopsys/I-2013.12-SP5/libraries/syn/dw_foundation.sldb}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25 /apps/synopsys/I-2013.12-SP5/libraries/syn/dw_foundation.sldb
+set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25
+read_sverilog top_wrapper.sv 	
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25'
+Loading db file '/apps/synopsys/I-2013.12-SP5/libraries/syn/dw_foundation.sldb'
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/gtech.db'
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/standard.sldb'
+  Loading link library 'tc240c'
+  Loading link library 'gtech'
+Loading sverilog file '/home/014536847/Documents/277_pro/new/copy/fifo/top_wrapper.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/014536847/Documents/277_pro/new/copy/fifo/top_wrapper.sv
+Opening include file wptr_full.sv
+Opening include file async_cmp.sv
+Opening include file rptr_empty.sv
+Opening include file fifomem.sv
+Opening include file fifo.sv
+Opening include file psi.sv
+
+Inferred memory devices in process
+	in routine wptr_full line 13 in file
+		'wptr_full.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      wptr_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      wbin_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine wptr_full line 28 in file
+		'wptr_full.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      wfull_reg      | Flip-flop |   1   |  N  | N  | Y  | Y  | N  | N  | N  |
+|     wfull2_reg      | Flip-flop |   1   |  N  | N  | Y  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine async_cmp line 12 in file
+		'async_cmp.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    direction_reg    | Flip-flop |   1   |  N  | N  | Y  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine rptr_empty line 13 in file
+		'rptr_empty.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      rptr_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      rbin_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine rptr_empty line 27 in file
+		'rptr_empty.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rempty_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     rempty2_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine fifomem line 17 in file
+		'fifomem.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       MEM_reg       | Flip-flop |  256  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|    fifomem/16    |  256   |    1    |      8       |
+======================================================
+
+Inferred memory devices in process
+	in routine psi line 31 in file
+		'psi.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   data_valid_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      pdata_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|        i_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     serial_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|      psi/18      |   32   |    1    |      5       |
+======================================================
+Warning:  /home/014536847/Documents/277_pro/new/copy/fifo/top_wrapper.sv:34: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/014536847/Documents/277_pro/new/copy/fifo/top_wrapper.sv:35: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/014536847/Documents/277_pro/new/copy/fifo/top_wrapper.sv:37: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully.
+Current design is now '/home/014536847/Documents/277_pro/new/copy/fifo/wptr_full.db:wptr_full'
+Loaded 7 designs.
+Current design is 'wptr_full'.
+wptr_full async_cmp rptr_empty fifomem fifo2 psi wrapper
+current_design wrapper		
+Current design is 'wrapper'.
+{wrapper}
+create_clock p_clk -name p_clk -period 2
+1
+create_clock s_clk -name s_clk -period 4
+1
+set_propagated_clock p_clk
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_propagated_clock s_clks
+Warning: Can't find object 's_clks' in design 'wrapper'. (UID-95)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
+0
+set_clock_uncertainty 0.0 p_clk
+1
+set_clock_uncertainty 0.0 s_clk
+1
+set_propagated_clock p_clk
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_propagated_clock s_clk
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set all_inputs_wo_rst_clk [remove_from_collection [remove_from_collection [all_inputs] [get_port p_clk]] [get_port n_rst]]
+Warning: Can't find port 'n_rst' in design 'wrapper'. (UID-95)
+{parallel_data_in[31] parallel_data_in[30] parallel_data_in[29] parallel_data_in[28] parallel_data_in[27] parallel_data_in[26] parallel_data_in[25] parallel_data_in[24] parallel_data_in[23] parallel_data_in[22] parallel_data_in[21] parallel_data_in[20] parallel_data_in[19] parallel_data_in[18] parallel_data_in[17] parallel_data_in[16] parallel_data_in[15] parallel_data_in[14] parallel_data_in[13] parallel_data_in[12] parallel_data_in[11] parallel_data_in[10] parallel_data_in[9] parallel_data_in[8] parallel_data_in[7] parallel_data_in[6] parallel_data_in[5] parallel_data_in[4] parallel_data_in[3] parallel_data_in[2] parallel_data_in[1] parallel_data_in[0] req rst_n flush s_clk}
+set_driving_cell -lib_cell CND2X1 $all_inputs_wo_rst_clk
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set_input_delay 0.2 -clock p_clk $all_inputs_wo_rst_clk
+1
+set_output_delay 0.2 -clock s_clk [all_outputs]
+1
+set_fix_hold [ get_clocks p_clk ]
+1
+set_host_options -max_cores 4
+1
+set_max_delay 2.5 -from [all_inputs] -to [all_outputs]
+1
+set_max_total_power 
+Error: Required argument 'power' was not found (CMD-007)
+set_max_area 
+Error: Required argument 'area_value' was not found (CMD-007)
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25"
+Library analysis succeeded.
+Information: Running optimization using a maximum of 4 cores. (OPT-1500)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.5.1 |   *     |
+| Licensed DW Building Blocks        | I-2013.12-DWBB_201312.5 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 5 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'wrapper'
+
+Loaded alib file './alib-52/tc240c.db_NOMIN25.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy f before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy p before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy f/async_cmp before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy f/fifomem before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy f/rptr_empty before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy f/wptr_full before Pass 1 (OPT-776)
+Information: Ungrouping 6 of 7 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'wrapper'
+Information: Added key list 'DesignWare' to design 'wrapper'. (DDB-72)
+Information: In design 'wrapper', the register 'f/wptr_full/wbin_reg[7]' is removed because it is merged to 'f/wptr_full/wptr_reg[7]'. (OPT-1215)
+Information: In design 'wrapper', the register 'f/rptr_empty/rbin_reg[7]' is removed because it is merged to 'f/rptr_empty/rptr_reg[7]'. (OPT-1215)
+ Implement Synthetic for 'wrapper'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Warning: Clock port 's_clk' is assigned input delay relative to clock 'p_clk'. (TIM-111)
+Warning: Clock port 's_clk' is assigned input delay relative to clock 'p_clk'. (TIM-111)
+Information: Input delay ('fall') on clock port 's_clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 's_clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'p_clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'p_clk' will be added to the clock's propagated skew. (TIM-112)
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+Warning: Clock port 's_clk' is assigned input delay relative to clock 'p_clk'. (TIM-111)
+Warning: Clock port 's_clk' is assigned input delay relative to clock 'p_clk'. (TIM-111)
+Information: Input delay ('fall') on clock port 's_clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 's_clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'p_clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'p_clk' will be added to the clock's propagated skew. (TIM-112)
+Warning: Clock port 's_clk' is assigned input delay relative to clock 'p_clk'. (TIM-111)
+Warning: Clock port 's_clk' is assigned input delay relative to clock 'p_clk'. (TIM-111)
+Information: Input delay ('fall') on clock port 's_clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 's_clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'p_clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'p_clk' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:06    3202.5      0.11       0.3       0.0                              0.0000      0.00  
+    0:00:06    3220.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    3220.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:06    3219.5      0.00       0.0       0.0                              0.0000      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:07    3219.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:07    3216.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3195.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3195.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3195.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3195.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3190.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3190.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3190.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3190.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:07    3187.0      0.00       0.0       0.0                              0.0000      0.00  
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+update_timing
+Information: Updating design information... (UID-85)
+Warning: Clock port 's_clk' is assigned input delay relative to clock 'p_clk'. (TIM-111)
+Warning: Clock port 's_clk' is assigned input delay relative to clock 'p_clk'. (TIM-111)
+Information: Input delay ('fall') on clock port 's_clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 's_clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'p_clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'p_clk' will be added to the clock's propagated skew. (TIM-112)
+1
+report_timing -max_paths 5
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : wrapper
+Version: K-2015.06-SP5-1
+Date   : Tue May 11 01:19:56 2021
+****************************************
+
+Operating Conditions: NOMIN25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: p/i_reg[0] (rising edge-triggered flip-flop clocked by p_clk)
+  Endpoint: p/i_reg[31]
+            (rising edge-triggered flip-flop clocked by p_clk)
+  Path Group: p_clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock p_clk (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  p/i_reg[0]/CP (CFD1QXL)                  0.00       0.00 r
+  p/i_reg[0]/Q (CFD1QXL)                   0.43       0.43 r
+  U992/Z (CND2X1)                          0.17       0.60 f
+  U948/Z (CNR2X1)                          0.11       0.70 r
+  U1159/Z (CND2X1)                         0.11       0.81 f
+  U769/Z (CNR2X1)                          0.13       0.94 r
+  U750/Z (CAN2X1)                          0.15       1.10 r
+  U1191/CO (CHA1X1)                        0.17       1.26 r
+  U807/Z (CND2X1)                          0.10       1.37 f
+  U801/Z (CNR2IX1)                         0.10       1.46 r
+  U1160/Z (CENX1)                          0.08       1.54 f
+  U1161/Z (CAOR2XL)                        0.18       1.72 f
+  p/i_reg[31]/D (CFD1QXL)                  0.00       1.72 f
+  data arrival time                                   1.72
+
+  clock p_clk (rise edge)                  2.00       2.00
+  clock network delay (propagated)         0.00       2.00
+  p/i_reg[31]/CP (CFD1QXL)                 0.00       2.00 r
+  library setup time                      -0.27       1.73
+  data required time                                  1.73
+  -----------------------------------------------------------
+  data required time                                  1.73
+  data arrival time                                  -1.72
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: p/i_reg[20]
+              (rising edge-triggered flip-flop clocked by p_clk)
+  Endpoint: f/wptr_full/wptr_reg[6]
+            (rising edge-triggered flip-flop clocked by p_clk)
+  Path Group: p_clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock p_clk (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  p/i_reg[20]/CP (CFD1QX2)                 0.00       0.00 r
+  p/i_reg[20]/Q (CFD1QX2)                  0.26       0.26 f
+  U1025/Z (CNR2X1)                         0.09       0.35 r
+  U1026/Z (CND4X1)                         0.13       0.48 f
+  U919/Z (CNR2X1)                          0.08       0.56 r
+  U746/Z (CANR1XL)                         0.12       0.69 f
+  U759/Z (CNR2IX1)                         0.12       0.80 r
+  U755/Z (CIVX2)                           0.07       0.87 f
+  U1027/Z (CNR2X2)                         0.08       0.95 r
+  U1028/Z (CND2X2)                         0.11       1.05 f
+  U1031/Z (CNR2X1)                         0.13       1.18 r
+  U1032/Z (CND2IX1)                        0.12       1.30 f
+  U799/Z (CNR2IX1)                         0.10       1.40 r
+  U797/Z (CENX1)                           0.18       1.58 r
+  U751/Z (CENX1)                           0.15       1.74 r
+  f/wptr_full/wptr_reg[6]/D (CFD2QXL)      0.00       1.74 r
+  data arrival time                                   1.74
+
+  clock p_clk (rise edge)                  2.00       2.00
+  clock network delay (propagated)         0.00       2.00
+  f/wptr_full/wptr_reg[6]/CP (CFD2QXL)     0.00       2.00 r
+  library setup time                      -0.22       1.78
+  data required time                                  1.78
+  -----------------------------------------------------------
+  data required time                                  1.78
+  data arrival time                                  -1.74
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: p/i_reg[0] (rising edge-triggered flip-flop clocked by p_clk)
+  Endpoint: p/i_reg[30]
+            (rising edge-triggered flip-flop clocked by p_clk)
+  Path Group: p_clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock p_clk (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  p/i_reg[0]/CP (CFD1QXL)                  0.00       0.00 r
+  p/i_reg[0]/Q (CFD1QXL)                   0.43       0.43 r
+  U992/Z (CND2X1)                          0.17       0.60 f
+  U948/Z (CNR2X1)                          0.11       0.70 r
+  U1159/Z (CND2X1)                         0.11       0.81 f
+  U769/Z (CNR2X1)                          0.13       0.94 r
+  U750/Z (CAN2X1)                          0.15       1.10 r
+  U1191/CO (CHA1X1)                        0.17       1.26 r
+  U807/Z (CND2X1)                          0.10       1.37 f
+  U1231/Z (CENX1)                          0.14       1.51 f
+  U1232/Z (CAOR2XL)                        0.19       1.70 f
+  p/i_reg[30]/D (CFD1QX2)                  0.00       1.70 f
+  data arrival time                                   1.70
+
+  clock p_clk (rise edge)                  2.00       2.00
+  clock network delay (propagated)         0.00       2.00
+  p/i_reg[30]/CP (CFD1QX2)                 0.00       2.00 r
+  library setup time                      -0.22       1.78
+  data required time                                  1.78
+  -----------------------------------------------------------
+  data required time                                  1.78
+  data arrival time                                  -1.70
+  -----------------------------------------------------------
+  slack (MET)                                         0.08
+
+
+  Startpoint: p/i_reg[20]
+              (rising edge-triggered flip-flop clocked by p_clk)
+  Endpoint: f/fifomem/MEM_reg[1][0]
+            (rising edge-triggered flip-flop clocked by p_clk)
+  Path Group: p_clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock p_clk (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  p/i_reg[20]/CP (CFD1QX2)                 0.00       0.00 r
+  p/i_reg[20]/Q (CFD1QX2)                  0.26       0.26 f
+  U1025/Z (CNR2X1)                         0.09       0.35 r
+  U1026/Z (CND4X1)                         0.13       0.48 f
+  U919/Z (CNR2X1)                          0.08       0.56 r
+  U746/Z (CANR1XL)                         0.12       0.69 f
+  U759/Z (CNR2IX1)                         0.12       0.80 r
+  U815/Z (CNIVX2)                          0.23       1.03 r
+  U748/Z (CAN2X1)                          0.32       1.35 r
+  U1886/Z (CND2X1)                         0.23       1.58 f
+  U1917/Z (COND1XL)                        0.10       1.68 r
+  f/fifomem/MEM_reg[1][0]/D (CFD1QXL)      0.00       1.68 r
+  data arrival time                                   1.68
+
+  clock p_clk (rise edge)                  2.00       2.00
+  clock network delay (propagated)         0.00       2.00
+  f/fifomem/MEM_reg[1][0]/CP (CFD1QXL)     0.00       2.00 r
+  library setup time                      -0.23       1.77
+  data required time                                  1.77
+  -----------------------------------------------------------
+  data required time                                  1.77
+  data arrival time                                  -1.68
+  -----------------------------------------------------------
+  slack (MET)                                         0.09
+
+
+  Startpoint: p/i_reg[20]
+              (rising edge-triggered flip-flop clocked by p_clk)
+  Endpoint: f/fifomem/MEM_reg[0][0]
+            (rising edge-triggered flip-flop clocked by p_clk)
+  Path Group: p_clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock p_clk (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  p/i_reg[20]/CP (CFD1QX2)                 0.00       0.00 r
+  p/i_reg[20]/Q (CFD1QX2)                  0.26       0.26 f
+  U1025/Z (CNR2X1)                         0.09       0.35 r
+  U1026/Z (CND4X1)                         0.13       0.48 f
+  U919/Z (CNR2X1)                          0.08       0.56 r
+  U746/Z (CANR1XL)                         0.12       0.69 f
+  U759/Z (CNR2IX1)                         0.12       0.80 r
+  U815/Z (CNIVX2)                          0.23       1.03 r
+  U748/Z (CAN2X1)                          0.32       1.35 r
+  U1886/Z (CND2X1)                         0.23       1.58 f
+  U1919/Z (COND1XL)                        0.10       1.68 r
+  f/fifomem/MEM_reg[0][0]/D (CFD1QXL)      0.00       1.68 r
+  data arrival time                                   1.68
+
+  clock p_clk (rise edge)                  2.00       2.00
+  clock network delay (propagated)         0.00       2.00
+  f/fifomem/MEM_reg[0][0]/CP (CFD1QXL)     0.00       2.00 r
+  library setup time                      -0.23       1.77
+  data required time                                  1.77
+  -----------------------------------------------------------
+  data required time                                  1.77
+  data arrival time                                  -1.68
+  -----------------------------------------------------------
+  slack (MET)                                         0.09
+
+
+  Startpoint: f/fifomem/MEM_reg[88][0]
+              (rising edge-triggered flip-flop clocked by p_clk)
+  Endpoint: output_psi (output port clocked by s_clk)
+  Path Group: s_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock p_clk (rise edge)                                 2.00       2.00
+  clock network delay (propagated)                        0.00       2.00
+  f/fifomem/MEM_reg[88][0]/CP (CFD1QXL)                   0.00       2.00 r
+  f/fifomem/MEM_reg[88][0]/Q (CFD1QXL)                    0.36       2.36 f
+  U860/Z (CANR2XL)                                        0.14       2.50 r
+  U817/Z (CND4XL)                                         0.15       2.65 f
+  U754/Z (CANR2XL)                                        0.19       2.84 r
+  U1279/Z (CND4X1)                                        0.15       2.99 f
+  U1280/Z (CMXI2X1)                                       0.11       3.10 r
+  U1307/Z (CMXI2XL)                                       0.09       3.19 f
+  output_psi (out)                                        0.00       3.19 f
+  data arrival time                                                  3.19
+
+  clock s_clk (rise edge)                                 4.00       4.00
+  clock network delay (propagated)                        0.00       4.00
+  output external delay                                  -0.20       3.80
+  data required time                                                 3.80
+  --------------------------------------------------------------------------
+  data required time                                                 3.80
+  data arrival time                                                 -3.19
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.61
+
+
+  Startpoint: f/wptr_full/wptr_reg[7]
+              (rising edge-triggered flip-flop clocked by p_clk)
+  Endpoint: f/rptr_empty/rempty2_reg
+            (rising edge-triggered flip-flop clocked by s_clk)
+  Path Group: s_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock p_clk (rise edge)                                 2.00       2.00
+  clock network delay (propagated)                        0.00       2.00
+  f/wptr_full/wptr_reg[7]/CP (CFD2QXL)                    0.00       2.00 r
+  f/wptr_full/wptr_reg[7]/Q (CFD2QXL)                     0.58       2.58 r
+  U981/Z (CENX1)                                          0.22       2.80 r
+  U1072/Z (CND4X1)                                        0.13       2.93 f
+  U1073/Z (CNR2X1)                                        0.10       3.03 r
+  U1074/Z (CNR2IX1)                                       0.15       3.17 r
+  f/rptr_empty/rempty2_reg/D (CFD4QXL)                    0.00       3.17 r
+  data arrival time                                                  3.17
+
+  clock s_clk (rise edge)                                 4.00       4.00
+  clock network delay (propagated)                        0.06       4.06
+  f/rptr_empty/rempty2_reg/CP (CFD4QXL)                   0.00       4.06 r
+  library setup time                                     -0.21       3.86
+  data required time                                                 3.86
+  --------------------------------------------------------------------------
+  data required time                                                 3.86
+  data arrival time                                                 -3.17
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.68
+
+
+  Startpoint: f/wptr_full/wfull_reg
+              (rising edge-triggered flip-flop clocked by p_clk)
+  Endpoint: full (output port clocked by s_clk)
+  Path Group: s_clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock p_clk (rise edge)                  2.00       2.00
+  clock network delay (propagated)         0.00       2.00
+  f/wptr_full/wfull_reg/CP (CFD3QXL)       0.00       2.00 r
+  f/wptr_full/wfull_reg/Q (CFD3QXL)        0.45       2.45 r
+  full (out)                               0.00       2.45 r
+  data arrival time                                   2.45
+
+  clock s_clk (rise edge)                  4.00       4.00
+  clock network delay (propagated)         0.00       4.00
+  output external delay                   -0.20       3.80
+  data required time                                  3.80
+  -----------------------------------------------------------
+  data required time                                  3.80
+  data arrival time                                  -2.45
+  -----------------------------------------------------------
+  slack (MET)                                         1.35
+
+
+  Startpoint: f/rptr_empty/rbin_reg[0]
+              (rising edge-triggered flip-flop clocked by s_clk)
+  Endpoint: f/rptr_empty/rptr_reg[5]
+            (rising edge-triggered flip-flop clocked by s_clk)
+  Path Group: s_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock s_clk (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.06       0.06
+  f/rptr_empty/rbin_reg[0]/CP (CFD2QXL)                   0.00       0.06 r
+  f/rptr_empty/rbin_reg[0]/Q (CFD2QXL)                    0.47       0.53 r
+  U961/Z (CNR2IX1)                                        0.16       0.69 r
+  U1053/Z (CAN2X1)                                        0.15       0.84 r
+  U1057/Z (CAN2X1)                                        0.14       0.98 r
+  U1060/Z (CAN2X1)                                        0.14       1.12 r
+  U1063/Z (CAN2X1)                                        0.14       1.26 r
+  U1066/Z (CAN2X1)                                        0.15       1.41 r
+  U1068/Z (CAN2X1)                                        0.14       1.54 r
+  U1070/Z (CNR2X1)                                        0.05       1.60 f
+  U800/Z (CMX2XL)                                         0.20       1.79 f
+  f/rptr_empty/rptr_reg[5]/D (CFD2QXL)                    0.00       1.79 f
+  data arrival time                                                  1.79
+
+  clock s_clk (rise edge)                                 4.00       4.00
+  clock network delay (propagated)                        0.06       4.06
+  f/rptr_empty/rptr_reg[5]/CP (CFD2QXL)                   0.00       4.06 r
+  library setup time                                     -0.19       3.87
+  data required time                                                 3.87
+  --------------------------------------------------------------------------
+  data required time                                                 3.87
+  data arrival time                                                 -1.79
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.08
+
+
+  Startpoint: f/rptr_empty/rbin_reg[0]
+              (rising edge-triggered flip-flop clocked by s_clk)
+  Endpoint: f/rptr_empty/rptr_reg[7]
+            (rising edge-triggered flip-flop clocked by s_clk)
+  Path Group: s_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock s_clk (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.06       0.06
+  f/rptr_empty/rbin_reg[0]/CP (CFD2QXL)                   0.00       0.06 r
+  f/rptr_empty/rbin_reg[0]/Q (CFD2QXL)                    0.47       0.53 r
+  U961/Z (CNR2IX1)                                        0.16       0.69 r
+  U1053/Z (CAN2X1)                                        0.15       0.84 r
+  U1057/Z (CAN2X1)                                        0.14       0.98 r
+  U1060/Z (CAN2X1)                                        0.14       1.12 r
+  U1063/Z (CAN2X1)                                        0.14       1.26 r
+  U1066/Z (CAN2X1)                                        0.15       1.41 r
+  U1068/Z (CAN2X1)                                        0.14       1.54 r
+  U1233/Z (CEOXL)                                         0.17       1.71 r
+  f/rptr_empty/rptr_reg[7]/D (CFD2QXL)                    0.00       1.71 r
+  data arrival time                                                  1.71
+
+  clock s_clk (rise edge)                                 4.00       4.00
+  clock network delay (propagated)                        0.06       4.06
+  f/rptr_empty/rptr_reg[7]/CP (CFD2QXL)                   0.00       4.06 r
+  library setup time                                     -0.21       3.85
+  data required time                                                 3.85
+  --------------------------------------------------------------------------
+  data required time                                                 3.85
+  data arrival time                                                 -1.71
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.14
+
+
+1
+report_power
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : wrapper
+Version: K-2015.06-SP5-1
+Date   : Tue May 11 01:19:56 2021
+****************************************
+
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25)
+
+
+Operating Conditions: NOMIN25   Library: tc240c
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 2.5  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = Unitless
+
+
+  Cell Internal Power  =  26.7459 mW   (97%)
+  Net Switching Power  = 782.2369 uW    (3%)
+                         ---------
+Total Dynamic Power    =  27.5282 mW  (100%)
+
+Cell Leakage Power     =   0.0000 
+
+Error: Either dynamic power or leakage power, in the library, is unitless. Unable to display complete power group summary. (PWR-799)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000               NA   (     N/A)
+memory             0.0000            0.0000            0.0000               NA   (     N/A)
+black_box          0.0000            0.0000            0.0000               NA   (     N/A)
+clock_network      0.0000            0.0000            0.0000               NA   (     N/A)
+register       2.5507e+04          126.9500            0.0000               NA   (     N/A)
+sequential         0.6254            0.0000            0.0000               NA   (     N/A)
+combinational  1.2382e+03          655.2861            0.0000               NA   (     N/A)
+--------------------------------------------------------------------------------------------------
+Total          2.6746e+04 uW       782.2361 uW         0.0000               NA        
+1
+report_area
+ 
+****************************************
+Report : area
+Design : wrapper
+Version: K-2015.06-SP5-1
+Date   : Tue May 11 01:19:56 2021
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25)
+
+Number of ports:                           41
+Number of nets:                          1572
+Number of cells:                         1534
+Number of combinational cells:           1176
+Number of sequential cells:               358
+Number of macros/black boxes:               0
+Number of buf/inv:                        102
+Number of references:                      42
+
+Combinational area:               1828.500000
+Buf/Inv area:                      102.500000
+Noncombinational area:            1358.500000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  3187.000000
+Total area:                 undefined
+1
+write -hierarchy -format verilog -output top_script_report.v
+Writing verilog file '/home/014536847/Documents/277_pro/new/copy/fifo/top_script_report.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+quit
+
+Thank you...

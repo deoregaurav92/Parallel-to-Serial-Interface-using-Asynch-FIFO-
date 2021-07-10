@@ -1,0 +1,1206 @@
+[015215746@coe-ee-cad33 top_module]$ .rundc fifo
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+              Version K-2015.06-SP5-1 for linux64 - Feb 26, 2016 
+                                        
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  home015215746@SJSUAD.SJSU.EDU.synopsys_dv_prefs.tcl
+#Set the target & link library
+set target_library {appstoshibasjsusynopsystc240ctc240c.db_NOMIN25}
+appstoshibasjsusynopsystc240ctc240c.db_NOMIN25
+set link_library {appstoshibasjsusynopsystc240ctc240c.db_NOMIN25 appssynopsysI-2013.12-SP5librariessyndw_foundation.sldb}
+appstoshibasjsusynopsystc240ctc240c.db_NOMIN25 appssynopsysI-2013.12-SP5librariessyndw_foundation.sldb
+read_sverilog top.sv 	
+Loading db file 'appstoshibasjsusynopsystc240ctc240c.db_NOMIN25'
+Loading db file 'appssynopsysI-2013.12-SP5librariessyndw_foundation.sldb'
+Loading db file 'appssynopsysSYNTHlibrariessyngtech.db'
+Loading db file 'appssynopsysSYNTHlibrariessynstandard.sldb'
+  Loading link library 'tc240c'
+  Loading link library 'gtech'
+Loading sverilog file 'home015215746@SJSUAD.SJSU.EDUDevEE277project_testingtop_moduletop.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file home015215746@SJSUAD.SJSU.EDUDevEE277project_testingtop_moduletop.sv
+Opening include file parallel_interface.sv
+Warning  parallel_interface.sv8 Using default enum base size of 32. (VER-533)
+Opening include file fifo.sv
+Opening include file read_sync.sv
+Opening include file write_sync.sv
+Opening include file flush_sync.sv
+Opening include file WFSM.sv
+Opening include file RFSM.sv
+Opening include file memory.sv
+Opening include file serial_interface.sv
+
+Statistics for case statements in always block at line 42 in file
+	'parallel_interface.sv'
+===============================================
+           Line             full parallel  
+===============================================
+            43                 noauto      
+===============================================
+
+Inferred memory devices in process
+	in routine parallel_interface line 22 in file
+		'parallel_interface.sv'.
+=================================================================================
+     Register Name        Type     Width  Bus  MB  AR  AS  SR  SS  ST 
+=================================================================================
+ parallel_data_reg_reg  Flip-flop   32     Y   N   Y   N   N   N   N  
+        cs_reg          Flip-flop   32     Y   N   Y   N   N   N   N  
+       grant_reg        Flip-flop    1     N   N   Y   N   N   N   N  
+    bit_counter_reg     Flip-flop   32     Y   N   Y   N   N   N   N  
+=================================================================================
+
+Inferred memory devices in process
+	in routine parallel_interface line 42 in file
+		'parallel_interface.sv'.
+==================================================================================
+       Register Name         Type   Width  Bus  MB  AR  AS  SR  SS  ST 
+==================================================================================
+ parallel_data_reg_temp_reg  Latch   32     Y   N   N   N   -   -   -  
+     out_data_temp_reg       Latch    1     N   N   N   N   -   -   -  
+       grant_temp_reg        Latch    1     N   N   N   N   -   -   -  
+           ns_reg            Latch   32     Y   N   N   N   -   -   -  
+    bit_counter_temp_reg     Latch   32     Y   N   N   N   -   -   -  
+==================================================================================
+Warning  parallel_interface.sv42 Netlist for always_comb block contains a latch. (ELAB-974)
+
+Inferred memory devices in process
+	in routine read_sync line 8 in file
+		'read_sync.sv'.
+===============================================================================
+    Register Name       Type     Width  Bus  MB  AR  AS  SR  SS  ST 
+===============================================================================
+   sync_rdptr_reg     Flip-flop    9     Y   N   Y   N   N   N   N  
+       r0_reg         Flip-flop    9     Y   N   Y   N   N   N   N  
+===============================================================================
+
+Inferred memory devices in process
+	in routine write_sync line 8 in file
+		'write_sync.sv'.
+===============================================================================
+    Register Name       Type     Width  Bus  MB  AR  AS  SR  SS  ST 
+===============================================================================
+   sync_wrptr_reg     Flip-flop    9     Y   N   Y   N   N   N   N  
+       w0_reg         Flip-flop    9     Y   N   Y   N   N   N   N  
+===============================================================================
+
+Inferred memory devices in process
+	in routine flush_sync line 6 in file
+		'flush_sync.sv'.
+===============================================================================
+    Register Name       Type     Width  Bus  MB  AR  AS  SR  SS  ST 
+===============================================================================
+   sync_flush_reg     Flip-flop    1     N   N   Y   N   N   N   N  
+       f0_reg         Flip-flop    1     N   N   Y   N   N   N   N  
+===============================================================================
+
+Statistics for case statements in always block at line 25 in file
+	'WFSM.sv'
+===============================================
+           Line             full parallel  
+===============================================
+            38                autoauto     
+===============================================
+
+Statistics for case statements in always block at line 74 in file
+	'WFSM.sv'
+===============================================
+           Line             full parallel  
+===============================================
+            77                autoauto     
+===============================================
+
+Inferred memory devices in process
+	in routine WFSM line 25 in file
+		'WFSM.sv'.
+===============================================================================
+    Register Name       Type     Width  Bus  MB  AR  AS  SR  SS  ST 
+===============================================================================
+      wren_reg        Flip-flop    1     N   N   Y   N   N   N   N  
+  current_state_reg   Flip-flop    2     Y   N   Y   N   N   N   N  
+      full_reg        Flip-flop    1     N   N   Y   N   N   N   N  
+      wbin_reg        Flip-flop    9     Y   N   Y   N   N   N   N  
+      wrptr_reg       Flip-flop    9     Y   N   Y   N   N   N   N  
+===============================================================================
+
+Statistics for case statements in always block at line 23 in file
+	'RFSM.sv'
+===============================================
+           Line             full parallel  
+===============================================
+            36                autoauto     
+===============================================
+
+Statistics for case statements in always block at line 71 in file
+	'RFSM.sv'
+===============================================
+           Line             full parallel  
+===============================================
+            74                autoauto     
+===============================================
+
+Inferred memory devices in process
+	in routine RFSM line 23 in file
+		'RFSM.sv'.
+===============================================================================
+    Register Name       Type     Width  Bus  MB  AR  AS  SR  SS  ST 
+===============================================================================
+      rden_reg        Flip-flop    1     N   N   Y   N   N   N   N  
+  current_state_reg   Flip-flop    2     Y   N   Y   N   N   N   N  
+      empty_reg       Flip-flop    1     N   N   N   Y   N   N   N  
+      rbin_reg        Flip-flop    9     Y   N   Y   N   N   N   N  
+      rdptr_reg       Flip-flop    9     Y   N   Y   N   N   N   N  
+===============================================================================
+
+Inferred memory devices in process
+	in routine memory line 13 in file
+		'memory.sv'.
+===============================================================================
+    Register Name       Type     Width  Bus  MB  AR  AS  SR  SS  ST 
+===============================================================================
+      FIFO_reg        Flip-flop   128    Y   N   Y   N   N   N   N  
+===============================================================================
+
+Inferred memory devices in process
+	in routine memory line 34 in file
+		'memory.sv'.
+===============================================================================
+    Register Name       Type     Width  Bus  MB  AR  AS  SR  SS  ST 
+===============================================================================
+     dataOut_reg      Flip-flop    1     N   N   N   N   N   N   N  
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+ block nameline   Inputs  Outputs  # sel inputs 
+======================================================
+    memory46       128       1          7       
+======================================================
+Warning  serial_interface.sv117 signed to unsigned conversion occurs. (VER-318)
+Warning  serial_interface.sv112 signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 73 in file
+	'serial_interface.sv'
+===============================================
+           Line             full parallel  
+===============================================
+            75                autoauto     
+===============================================
+
+Inferred memory devices in process
+	in routine serial_interface line 53 in file
+		'serial_interface.sv'.
+===============================================================================
+    Register Name       Type     Width  Bus  MB  AR  AS  SR  SS  ST 
+===============================================================================
+   datacounter_reg    Flip-flop    5     Y   N   N   N   N   N   N  
+      state_reg       Flip-flop    2     Y   N   N   N   N   N   N  
+  delimcounter_reg    Flip-flop    3     Y   N   N   N   N   N   N  
+     dataout_reg      Flip-flop    1     N   N   N   N   N   N   N  
+   inputSample_reg    Flip-flop    1     N   N   N   N   N   N   N  
+     request_reg      Flip-flop    1     N   N   N   N   N   N   N  
+===============================================================================
+Statistics for MUX_OPs
+=========================================================
+  block nameline     Inputs  Outputs  # sel inputs 
+=========================================================
+ serial_interface48    8        3          3       
+=========================================================
+Presto compilation completed successfully.
+Current design is now 'home015215746@SJSUAD.SJSU.EDUDevEE277project_testingtop_moduleparallel_interface.dbparallel_interface'
+Loaded 10 designs.
+Current design is 'parallel_interface'.
+parallel_interface read_sync write_sync flush_sync WFSM RFSM memory fifo serial_interface top
+current_design top		
+Current design is 'top'.
+{top}
+#freq of parallel clk = 1.34 GHz
+create_clock p_clk -name p_clk -period 0.75
+Information Building the design 'fifo' instantiated from design 'top' with
+	the parameters 8,128. (HDL-193)
+Warning Cannot find the design 'fifo' in the library 'WORK'. (LBR-1)
+Warning Unable to resolve reference 'fifo' in 'top'. (LINK-5)
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+1
+#create_clock p_clk -name p_clk -period 2
+#freq of serial clk = 800 MHz
+create_clock s_clk -name s_clk -period 1.25
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+1
+#create_clock s_clk -name s_clk -period 4
+#Setting both the clk as propagated 
+set_propagated_clock p_clk
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+Information set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_propagated_clock s_clk
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+Information set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+#Setting clock latency & transition
+set_clock_latency -source 0 p_clk
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+1
+set_clock_latency 0 p_clk
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+Warning Converting propagated clock at 'p_clk' to ideal clock.  (UID-476)
+1
+#Setting clk uncertaintity (clk jitter & clk skew)
+set_clock_uncertainty 0.3 p_clk
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+1
+set_clock_transition 0.0 p_clk
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+1
+set_clock_uncertainty 0.0 s_clk
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+1
+set_clock_transition 0.0 s_clk
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+Warning Clock transition specified for propagated clock `s_clk` will be ignored.  (UID-480)
+1
+#set all_inputs_wo_rst_clk [remove_from_collection [remove_from_collection [all_inputs] [get_port p_clk]] [get_port n_rst]]
+#set_driving_cell -lib_cell CND2X1 $all_inputs_wo_rst_clk
+#Setting input & output external delay
+set_input_delay 0.2 -max -clock p_clk [all_inputs]
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+1
+set_output_delay 0.0 -max -clock s_clk [all_outputs]
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+1
+set_fix_hold [ get_clocks p_clk ]
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+1
+set_fix_hold [ get_clocks s_clk ]
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+1
+set_host_options -max_cores 4
+1
+set_max_delay 3.255 -from [all_inputs] -to [all_outputs]
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+1
+set_max_total_power
+Error Required argument 'power' was not found (CMD-007)
+set_max_area 0
+1
+#Check design before optimization
+check_design
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+ 
+
+check_design summary
+Version     K-2015.06-SP5-1
+Date        Tue May 11 115843 2021
+
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+InputsOutputs                                                      4
+    Multiply driven inputs (LINT-6)                                 4
+
+Cells                                                               4
+    Cells do not drive (LINT-1)                                     4
+
+Tristate                                                            3
+    A tristate bus has a non tri-state driver (LINT-34)             3
+--------------------------------------------------------------------------------
+
+Warning In design 'parallel_interface', cell 'C813' does not drive any nets. (LINT-1)
+Warning In design 'serial_interface', cell 'C154' does not drive any nets. (LINT-1)
+Warning In design 'serial_interface', cell 'C159' does not drive any nets. (LINT-1)
+Warning In design 'serial_interface', cell 'C164' does not drive any nets. (LINT-1)
+Warning In design 'top', input port 'p_clk' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning In design 'top', input port 'n_rst' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning In design 'top', input port 'flush' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning In design 'top', input port 's_clk' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning In design 'top', three-state bus 'pop' has non three-state driver 'S1C128Z_0'. (LINT-34)
+Warning In design 'top', three-state bus 'insert' has non three-state driver 'P1out_data_temp_regQ'. (LINT-34)
+Warning In design 'top', three-state bus 'parallel_to_fifo' has non three-state driver 'P1parallel_data_reg_reg[0]Q'. (LINT-34)
+1
+check_timing
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+Information Checking out the license 'DesignWare'. (SEC-104)
+Information Updating design information... (UID-85)
+Warning Design 'top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Warning Clock port 's_clk' is assigned input delay relative to clock 'p_clk'. (TIM-111)
+Warning Clock port 's_clk' is assigned input delay relative to clock 'p_clk'. (TIM-111)
+Information Input delay ('fall') on clock port 's_clk' will be added to the clock's propagated skew. (TIM-112)
+Information Input delay ('rise') on clock port 's_clk' will be added to the clock's propagated skew. (TIM-112)
+
+Information Checking generated_clocks...
+
+Information Checking loops...
+
+Information Checking no_input_delay...
+
+Information Checking unconstrained_endpoints...
+
+Warning The following end-points are not constrained for maximum delay.
+
+End point
+---------------
+P1bit_counter_reg[0]next_state
+P1bit_counter_reg[1]next_state
+P1bit_counter_reg[2]next_state
+P1bit_counter_reg[3]next_state
+P1bit_counter_reg[4]next_state
+P1bit_counter_reg[5]next_state
+P1bit_counter_reg[6]next_state
+P1bit_counter_reg[7]next_state
+P1bit_counter_reg[8]next_state
+P1bit_counter_reg[9]next_state
+P1bit_counter_reg[10]next_state
+P1bit_counter_reg[11]next_state
+P1bit_counter_reg[12]next_state
+P1bit_counter_reg[13]next_state
+P1bit_counter_reg[14]next_state
+P1bit_counter_reg[15]next_state
+P1bit_counter_reg[16]next_state
+P1bit_counter_reg[17]next_state
+P1bit_counter_reg[18]next_state
+P1bit_counter_reg[19]next_state
+P1bit_counter_reg[20]next_state
+P1bit_counter_reg[21]next_state
+P1bit_counter_reg[22]next_state
+P1bit_counter_reg[23]next_state
+P1bit_counter_reg[24]next_state
+P1bit_counter_reg[25]next_state
+P1bit_counter_reg[26]next_state
+P1bit_counter_reg[27]next_state
+P1bit_counter_reg[28]next_state
+P1bit_counter_reg[29]next_state
+P1bit_counter_reg[30]next_state
+P1bit_counter_reg[31]next_state
+P1bit_counter_temp_reg[0]data_in
+P1bit_counter_temp_reg[1]data_in
+P1bit_counter_temp_reg[2]data_in
+P1bit_counter_temp_reg[3]data_in
+P1bit_counter_temp_reg[4]data_in
+P1bit_counter_temp_reg[5]data_in
+P1bit_counter_temp_reg[6]data_in
+P1bit_counter_temp_reg[7]data_in
+P1bit_counter_temp_reg[8]data_in
+P1bit_counter_temp_reg[9]data_in
+P1bit_counter_temp_reg[10]data_in
+P1bit_counter_temp_reg[11]data_in
+P1bit_counter_temp_reg[12]data_in
+P1bit_counter_temp_reg[13]data_in
+P1bit_counter_temp_reg[14]data_in
+P1bit_counter_temp_reg[15]data_in
+P1bit_counter_temp_reg[16]data_in
+P1bit_counter_temp_reg[17]data_in
+P1bit_counter_temp_reg[18]data_in
+P1bit_counter_temp_reg[19]data_in
+P1bit_counter_temp_reg[20]data_in
+P1bit_counter_temp_reg[21]data_in
+P1bit_counter_temp_reg[22]data_in
+P1bit_counter_temp_reg[23]data_in
+P1bit_counter_temp_reg[24]data_in
+P1bit_counter_temp_reg[25]data_in
+P1bit_counter_temp_reg[26]data_in
+P1bit_counter_temp_reg[27]data_in
+P1bit_counter_temp_reg[28]data_in
+P1bit_counter_temp_reg[29]data_in
+P1bit_counter_temp_reg[30]data_in
+P1bit_counter_temp_reg[31]data_in
+P1cs_reg[0]next_state
+P1cs_reg[1]next_state
+P1cs_reg[2]next_state
+P1cs_reg[3]next_state
+P1cs_reg[4]next_state
+P1cs_reg[5]next_state
+P1cs_reg[6]next_state
+P1cs_reg[7]next_state
+P1cs_reg[8]next_state
+P1cs_reg[9]next_state
+P1cs_reg[10]next_state
+P1cs_reg[11]next_state
+P1cs_reg[12]next_state
+P1cs_reg[13]next_state
+P1cs_reg[14]next_state
+P1cs_reg[15]next_state
+P1cs_reg[16]next_state
+P1cs_reg[17]next_state
+P1cs_reg[18]next_state
+P1cs_reg[19]next_state
+P1cs_reg[20]next_state
+P1cs_reg[21]next_state
+P1cs_reg[22]next_state
+P1cs_reg[23]next_state
+P1cs_reg[24]next_state
+P1cs_reg[25]next_state
+P1cs_reg[26]next_state
+P1cs_reg[27]next_state
+P1cs_reg[28]next_state
+P1cs_reg[29]next_state
+P1cs_reg[30]next_state
+P1cs_reg[31]next_state
+P1grant_regnext_state
+P1grant_temp_regdata_in
+P1ns_reg[0]data_in
+P1ns_reg[1]data_in
+P1ns_reg[2]data_in
+P1ns_reg[3]data_in
+P1ns_reg[4]data_in
+P1ns_reg[5]data_in
+P1ns_reg[6]data_in
+P1ns_reg[7]data_in
+P1ns_reg[8]data_in
+P1ns_reg[9]data_in
+P1ns_reg[10]data_in
+P1ns_reg[11]data_in
+P1ns_reg[12]data_in
+P1ns_reg[13]data_in
+P1ns_reg[14]data_in
+P1ns_reg[15]data_in
+P1ns_reg[16]data_in
+P1ns_reg[17]data_in
+P1ns_reg[18]data_in
+P1ns_reg[19]data_in
+P1ns_reg[20]data_in
+P1ns_reg[21]data_in
+P1ns_reg[22]data_in
+P1ns_reg[23]data_in
+P1ns_reg[24]data_in
+P1ns_reg[25]data_in
+P1ns_reg[26]data_in
+P1ns_reg[27]data_in
+P1ns_reg[28]data_in
+P1ns_reg[29]data_in
+P1ns_reg[30]data_in
+P1ns_reg[31]data_in
+P1out_data_temp_regdata_in
+P1parallel_data_reg_reg[0]next_state
+P1parallel_data_reg_reg[1]next_state
+P1parallel_data_reg_reg[2]next_state
+P1parallel_data_reg_reg[3]next_state
+P1parallel_data_reg_reg[4]next_state
+P1parallel_data_reg_reg[5]next_state
+P1parallel_data_reg_reg[6]next_state
+P1parallel_data_reg_reg[7]next_state
+P1parallel_data_reg_reg[8]next_state
+P1parallel_data_reg_reg[9]next_state
+P1parallel_data_reg_reg[10]next_state
+P1parallel_data_reg_reg[11]next_state
+P1parallel_data_reg_reg[12]next_state
+P1parallel_data_reg_reg[13]next_state
+P1parallel_data_reg_reg[14]next_state
+P1parallel_data_reg_reg[15]next_state
+P1parallel_data_reg_reg[16]next_state
+P1parallel_data_reg_reg[17]next_state
+P1parallel_data_reg_reg[18]next_state
+P1parallel_data_reg_reg[19]next_state
+P1parallel_data_reg_reg[20]next_state
+P1parallel_data_reg_reg[21]next_state
+P1parallel_data_reg_reg[22]next_state
+P1parallel_data_reg_reg[23]next_state
+P1parallel_data_reg_reg[24]next_state
+P1parallel_data_reg_reg[25]next_state
+P1parallel_data_reg_reg[26]next_state
+P1parallel_data_reg_reg[27]next_state
+P1parallel_data_reg_reg[28]next_state
+P1parallel_data_reg_reg[29]next_state
+P1parallel_data_reg_reg[30]next_state
+P1parallel_data_reg_reg[31]next_state
+P1parallel_data_reg_temp_reg[0]data_in
+P1parallel_data_reg_temp_reg[1]data_in
+P1parallel_data_reg_temp_reg[2]data_in
+P1parallel_data_reg_temp_reg[3]data_in
+P1parallel_data_reg_temp_reg[4]data_in
+P1parallel_data_reg_temp_reg[5]data_in
+P1parallel_data_reg_temp_reg[6]data_in
+P1parallel_data_reg_temp_reg[7]data_in
+P1parallel_data_reg_temp_reg[8]data_in
+P1parallel_data_reg_temp_reg[9]data_in
+P1parallel_data_reg_temp_reg[10]data_in
+P1parallel_data_reg_temp_reg[11]data_in
+P1parallel_data_reg_temp_reg[12]data_in
+P1parallel_data_reg_temp_reg[13]data_in
+P1parallel_data_reg_temp_reg[14]data_in
+P1parallel_data_reg_temp_reg[15]data_in
+P1parallel_data_reg_temp_reg[16]data_in
+P1parallel_data_reg_temp_reg[17]data_in
+P1parallel_data_reg_temp_reg[18]data_in
+P1parallel_data_reg_temp_reg[19]data_in
+P1parallel_data_reg_temp_reg[20]data_in
+P1parallel_data_reg_temp_reg[21]data_in
+P1parallel_data_reg_temp_reg[22]data_in
+P1parallel_data_reg_temp_reg[23]data_in
+P1parallel_data_reg_temp_reg[24]data_in
+P1parallel_data_reg_temp_reg[25]data_in
+P1parallel_data_reg_temp_reg[26]data_in
+P1parallel_data_reg_temp_reg[27]data_in
+P1parallel_data_reg_temp_reg[28]data_in
+P1parallel_data_reg_temp_reg[29]data_in
+P1parallel_data_reg_temp_reg[30]data_in
+P1parallel_data_reg_temp_reg[31]data_in
+S1datacounter_reg[0]data_in
+S1datacounter_reg[1]data_in
+S1datacounter_reg[2]data_in
+S1datacounter_reg[3]data_in
+S1datacounter_reg[4]data_in
+S1dataout_regdata_in
+S1delimcounter_reg[0]data_in
+S1delimcounter_reg[1]data_in
+S1delimcounter_reg[2]data_in
+S1state_reg[0]data_in
+S1state_reg[1]data_in
+
+Information Checking pulse_clock_cell_type...
+
+Information Checking no_driving_cell...
+
+Information Checking partial_input_delay...
+Warning there are 37 input ports that only have partial input delay specified. (TIM-212)
+--------------------
+parallel_data_in[31]
+parallel_data_in[30]
+parallel_data_in[29]
+parallel_data_in[28]
+parallel_data_in[27]
+parallel_data_in[26]
+parallel_data_in[25]
+parallel_data_in[24]
+parallel_data_in[23]
+parallel_data_in[22]
+parallel_data_in[21]
+parallel_data_in[20]
+parallel_data_in[19]
+parallel_data_in[18]
+parallel_data_in[17]
+parallel_data_in[16]
+parallel_data_in[15]
+parallel_data_in[14]
+parallel_data_in[13]
+parallel_data_in[12]
+parallel_data_in[11]
+parallel_data_in[10]
+parallel_data_in[9]
+parallel_data_in[8]
+parallel_data_in[7]
+parallel_data_in[6]
+parallel_data_in[5]
+parallel_data_in[4]
+parallel_data_in[3]
+parallel_data_in[2]
+parallel_data_in[1]
+parallel_data_in[0]
+req
+p_clk
+n_rst
+flush
+s_clk
+1
+#Resynthesize to meet the constraints using the target library
+compile_ultra
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+Information Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information Running optimization using a maximum of 4 cores. (OPT-1500)
+Information Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+ DesignWare Building Block Library           Version          Available 
+============================================================================
+ Basic DW Building Blocks            K-2015.06-DWBB_201506.5.1
+                                                                         
+ Licensed DW Building Blocks         I-2013.12-DWBB_201312.5           
+============================================================================
+
+Information Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information There are 11 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'top'
+
+Information Building the design 'fifo' instantiated from design 'top' with
+	the parameters 8,128. (HDL-193)
+Warning Cannot find the design 'fifo' in the library 'WORK'. (LBR-1)
+Warning Unable to resolve reference 'fifo' in 'top'. (LINK-5)
+Loaded alib file '.alib-52tc240c.db_NOMIN25.alib'
+  Building model 'DW01_NAND2'
+Information Ungrouping 0 of 3 hierarchies before Pass 1 (OPT-775)
+Information State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'parallel_interface'
+ Implement Synthetic for 'parallel_interface'.
+Information Added key list 'DesignWare' to design 'parallel_interface'. (DDB-72)
+  Processing 'serial_interface'
+Information Added key list 'DesignWare' to design 'serial_interface'. (DDB-72)
+ Implement Synthetic for 'serial_interface'.
+  Processing 'top'
+Information Building the design 'fifo' instantiated from design 'top' with
+	the parameters 8,128. (HDL-193)
+Warning Cannot find the design 'fifo' in the library 'WORK'. (LBR-1)
+Warning Unable to resolve reference 'fifo' in 'top'. (LINK-5)
+
+  Updating timing information
+Information Updating design information... (UID-85)
+Warning Clock port 's_clk' is assigned input delay relative to clock 'p_clk'. (TIM-111)
+Warning Clock port 's_clk' is assigned input delay relative to clock 'p_clk'. (TIM-111)
+Information Input delay ('fall') on clock port 's_clk' will be added to the clock's propagated skew. (TIM-112)
+Information Input delay ('rise') on clock port 's_clk' will be added to the clock's propagated skew. (TIM-112)
+Warning Main library 'tc240c' does not specify the following unit required for power 'Leakage Power'. (PWR-424)
+Information The register 'P1cs_reg[31]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[31]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[31]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[30]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[30]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[30]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[29]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[29]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[29]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[28]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[28]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[28]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[27]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[27]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[27]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[26]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[26]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[26]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[25]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[25]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[25]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[24]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[24]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[24]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[23]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[23]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[23]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[22]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[22]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[22]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[21]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[21]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[21]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[20]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[20]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[20]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[19]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[19]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[19]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[18]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[18]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[18]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[17]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[17]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[17]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[16]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[16]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[16]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[15]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[15]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[15]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[14]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[14]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[14]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[13]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[13]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[13]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[12]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[12]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[12]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[11]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[11]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[11]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[10]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[10]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[10]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[9]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[9]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[9]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[8]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[8]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[8]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[7]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[7]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[7]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[6]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[6]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[6]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[5]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[5]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[5]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[4]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[4]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[4]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[3]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[3]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[3]' will be removed. (OPT-1207)
+Information The register 'P1cs_reg[2]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[2]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1ns_reg[2]' will be removed. (OPT-1207)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+Information The register 'P1bit_counter_temp_reg[31]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[31]' is a constant and will be removed. (OPT-1206)
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+Warning Clock port 's_clk' is assigned input delay relative to clock 'p_clk'. (TIM-111)
+Warning Clock port 's_clk' is assigned input delay relative to clock 'p_clk'. (TIM-111)
+Information Input delay ('fall') on clock port 's_clk' will be added to the clock's propagated skew. (TIM-112)
+Information Input delay ('rise') on clock port 's_clk' will be added to the clock's propagated skew. (TIM-112)
+Warning Clock port 's_clk' is assigned input delay relative to clock 'p_clk'. (TIM-111)
+Warning Clock port 's_clk' is assigned input delay relative to clock 'p_clk'. (TIM-111)
+Information Input delay ('fall') on clock port 's_clk' will be added to the clock's propagated skew. (TIM-112)
+Information Input delay ('rise') on clock port 's_clk' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    00004     796.0      0.11       0.1       0.0                              0.0000      0.00  
+    00004     796.0      0.11       0.1       0.0                              0.0000      0.00  
+    00004     796.0      0.11       0.1       0.0                              0.0000      0.00  
+    00004     796.0      0.11       0.1       0.0                              0.0000      0.00  
+Information The register 'P1bit_counter_temp_reg[6]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[6]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[7]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[7]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[8]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[8]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[9]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[9]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[10]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[10]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[11]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[11]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[12]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[12]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[13]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[13]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[14]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[14]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[15]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[15]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[16]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[16]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[17]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[17]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[18]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[18]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[19]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[19]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[20]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[20]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[21]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[21]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[22]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[22]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[23]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[23]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[24]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[24]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[25]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[25]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[26]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[26]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[27]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[27]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[28]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[28]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[29]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[29]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_temp_reg[30]' is a constant and will be removed. (OPT-1206)
+Information The register 'P1bit_counter_reg[30]' is a constant and will be removed. (OPT-1206)
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+    00004     588.5      0.00       0.0       0.0                              0.0000      0.00  
+Loading db file 'appstoshibasjsusynopsystc240ctc240c.db_NOMIN25'
+
+
+Note Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information Building the design 'fifo' instantiated from design 'top' with
+	the parameters 8,128. (HDL-193)
+Warning Cannot find the design 'fifo' in the library 'WORK'. (LBR-1)
+Warning Unable to resolve reference 'fifo' in 'top'. (LINK-5)
+Information State dependent leakage is now switched from off to on.
+Warning Main library 'tc240c' does not specify the following unit required for power 'Leakage Power'. (PWR-424)
+Information Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning Design has unannotated black box outputs. (PWR-428)
+1
+update_timing
+Information Building the design 'fifo' instantiated from design 'top' with
+	the parameters 8,128. (HDL-193)
+Warning Cannot find the design 'fifo' in the library 'WORK'. (LBR-1)
+Warning Unable to resolve reference 'fifo' in 'top'. (LINK-5)
+Information Updating design information... (UID-85)
+Warning Clock port 's_clk' is assigned input delay relative to clock 'p_clk'. (TIM-111)
+Warning Clock port 's_clk' is assigned input delay relative to clock 'p_clk'. (TIM-111)
+Information Input delay ('fall') on clock port 's_clk' will be added to the clock's propagated skew. (TIM-112)
+Information Input delay ('rise') on clock port 's_clk' will be added to the clock's propagated skew. (TIM-112)
+1
+# Generate report for setup & hold time path
+report_timing -delay max	
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+ 
+
+Report  timing
+        -path full
+        -delay max
+        -max_paths 1
+Design  top
+Version K-2015.06-SP5-1
+Date    Tue May 11 115848 2021
+
+
+Operating Conditions NOMIN25   Library tc240c
+Wire Load Model Mode top
+
+  Startpoint P1grant_reg
+              (rising edge-triggered flip-flop clocked by p_clk)
+  Endpoint grant (output port clocked by s_clk)
+  Path Group s_clk
+  Path Type max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock p_clk (rise edge)                  2.25       2.25
+  clock network delay (ideal)              0.00       2.25
+  P1grant_regCP (CFD2QX1)                0.00       2.25 r
+  P1grant_regQ (CFD2QX1)                 0.24       2.49 f
+  P1grant (parallel_interface)            0.00       2.49 f
+  grant (out)                              0.00       2.49 f
+  data arrival time                                   2.49
+
+  clock s_clk (rise edge)                  2.50       2.50
+  clock network delay (propagated)         0.00       2.50
+  output external delay                    0.00       2.50
+  data required time                                  2.50
+  -----------------------------------------------------------
+  data required time                                  2.50
+  data arrival time                                  -2.49
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+1
+report_timing -delay min	
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+ 
+
+Report  timing
+        -path full
+        -delay min
+        -max_paths 1
+Design  top
+Version K-2015.06-SP5-1
+Date    Tue May 11 115848 2021
+
+
+Operating Conditions NOMIN25   Library tc240c
+Wire Load Model Mode top
+
+  Startpoint F1full (internal pin)
+  Endpoint full (output port clocked by s_clk)
+  Path Group (none)
+  Path Type min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  F1full (fifo)                           0.00       0.00 r
+  full (out)                               0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+report_timing -max_paths 5
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+ 
+
+Report  timing
+        -path full
+        -delay max
+        -max_paths 5
+Design  top
+Version K-2015.06-SP5-1
+Date    Tue May 11 115848 2021
+
+
+Operating Conditions NOMIN25   Library tc240c
+Wire Load Model Mode top
+
+  Startpoint P1grant_reg
+              (rising edge-triggered flip-flop clocked by p_clk)
+  Endpoint grant (output port clocked by s_clk)
+  Path Group s_clk
+  Path Type max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock p_clk (rise edge)                  2.25       2.25
+  clock network delay (ideal)              0.00       2.25
+  P1grant_regCP (CFD2QX1)                0.00       2.25 r
+  P1grant_regQ (CFD2QX1)                 0.24       2.49 f
+  P1grant (parallel_interface)            0.00       2.49 f
+  grant (out)                              0.00       2.49 f
+  data arrival time                                   2.49
+
+  clock s_clk (rise edge)                  2.50       2.50
+  clock network delay (propagated)         0.00       2.50
+  output external delay                    0.00       2.50
+  data required time                                  2.50
+  -----------------------------------------------------------
+  data required time                                  2.50
+  data arrival time                                  -2.49
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint S1dataout_regCP
+              (internal path startpoint clocked by s_clk)
+  Endpoint output_psi (output port clocked by s_clk)
+  Path Group s_clk
+  Path Type max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock s_clk (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  input external delay                     0.00       0.00 r
+  S1dataout_regCP (CFD3QXL)              0.00       0.00 r
+  S1dataout_regQ (CFD3QXL)               0.38       0.38 r
+  S1dataout (serial_interface)            0.00       0.38 r
+  output_psi (out)                         0.00       0.38 r
+  data arrival time                                   0.38
+
+  clock s_clk (rise edge)                  1.25       1.25
+  clock network delay (propagated)         0.00       1.25
+  output external delay                    0.00       1.25
+  data required time                                  1.25
+  -----------------------------------------------------------
+  data required time                                  1.25
+  data arrival time                                  -0.38
+  -----------------------------------------------------------
+  slack (MET)                                         0.87
+
+
+1
+report_power
+ 
+
+Report  power
+        -analysis_effort low
+Design  top
+Version K-2015.06-SP5-1
+Date    Tue May 11 115848 2021
+
+
+
+Library(s) Used
+
+    tc240c (File appstoshibasjsusynopsystc240ctc240c.db_NOMIN25)
+
+
+Operating Conditions NOMIN25   Library tc240c
+Wire Load Model Mode top
+
+
+Global Operating Voltage = 2.5  
+Power-specific unit information 
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = Unitless
+
+
+  Cell Internal Power  =  19.1988 mW   (92%)
+  Net Switching Power  =   1.7070 mW    (8%)
+                         ---------
+Total Dynamic Power    =  20.9058 mW  (100%)
+
+Cell Leakage Power     =   0.0000 
+
+Error Either dynamic power or leakage power, in the library, is unitless. Unable to display complete power group summary. (PWR-799)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000               NA   (     NA)
+memory             0.0000            0.0000            0.0000               NA   (     NA)
+black_box          0.0000            0.0000            0.0000               NA   (     NA)
+clock_network    462.1595          915.3276            0.0000               NA   (     NA)
+register       1.6211e+04          322.5442            0.0000               NA   (     NA)
+sequential       762.4209           69.1413            0.0000               NA   (     NA)
+combinational  1.7630e+03          399.9958            0.0000               NA   (     NA)
+--------------------------------------------------------------------------------------------------
+Total          1.9199e+04 uW     1.7070e+03 uW         0.0000               NA        
+1
+report_area
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+ 
+
+Report  area
+Design  top
+Version K-2015.06-SP5-1
+Date    Tue May 11 115848 2021
+
+
+Library(s) Used
+
+    tc240c (File appstoshibasjsusynopsystc240ctc240c.db_NOMIN25)
+
+Number of ports                           85
+Number of nets                           304
+Number of cells                          223
+Number of combinational cells            123
+Number of sequential cells                98
+Number of macrosblack boxes               0
+Number of bufinv                         13
+Number of references                       4
+
+Combinational area                198.500000
+BufInv area                       13.000000
+Noncombinational area             390.000000
+MacroBlack Box area                0.000000
+Net Interconnect area      undefined  (No wire load specified)
+
+Total cell area                   588.500000
+Total area                 undefined
+
+Information This design contains black box (unknown) components. (RPT-8)
+1
+write -hierarchy -format verilog -output top_script_report.v
+Warning Design 'top' has '1' unresolved references. For more detailed information, use the link command. (UID-341)
+Writing verilog file 'home015215746@SJSUAD.SJSU.EDUDevEE277project_testingtop_moduletop_script_report.v'.
+1
+quit
+
+Thank you...
+ parallel_data_reg_temp_reg  Latch   32     Y   N   N   N   -   -   -  
+     out_data_temp_reg       Latch    1     N   N   N   N   -   -   -  
+       grant_temp_reg        Latch    1     N   N   N   N   -   -   -  
+           ns_reg            Latch   32     Y   N   N   N   -   -   -  
+    bit_counter_temp_reg     Latch   32     Y   N   N   N   -   -   -  
